@@ -1,0 +1,22 @@
+<!doctype html>
+<html>
+<head>
+<title>Outside</title>
+<body>
+<img id="frame" src="out.jpg">
+<script>
+var frame = document.getElementById('frame');
+
+function updateFrame() {
+	var img = new Image(640, 480);
+	var src = 'out.jpg?' + (new Date().getTime());
+	img.onload = function() {
+		frame.src = src;
+	};
+	img.src = src;
+}
+
+setInterval(updateFrame, 750);
+</script>
+</body>
+</html>
