@@ -1,22 +1,26 @@
 <!doctype html>
 <html>
-<head>
-<title>Outside</title>
-<body>
-<img id="frame" src="out.jpg">
-<script>
-var frame = document.getElementById('frame');
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width">
+        <title>Outside</title>
+    </head>
+    <body>
+        <img id="frame" src="out.jpg">
+        <script>
+            var frame = document.getElementById('frame');
 
-function updateFrame() {
-	var img = new Image(640, 480);
-	var src = 'out.jpg?' + (new Date().getTime());
-	img.onload = function() {
-		frame.src = src;
-	};
-	img.src = src;
-}
+            function updateFrame() {
+                var img = new Image(640, 480);
+                var src = 'out.jpg?' + (new Date().getTime());
+                img.onload = function() {
+                    frame.src = src;
+                };
+                img.src = src;
+            }
 
-setInterval(updateFrame, 750);
-</script>
-</body>
+            setInterval(updateFrame, 750);
+        </script>
+    </body>
 </html>
+
